@@ -273,12 +273,28 @@ Test data:
 Hints:
 § To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's >= 50 && <= 300 */
 
-/* const bill = 430;
+/*   */
 
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+/* function fruitProccesor(aaples, oranges) {
+	const juice = `Juice with ${aaples} aaaple and ${oranges} orange.`;
+	return juice;
+}
 
-const finalValue = bill + tip;
+const luc = fruitProccesor(5, 0);
 
-console.log(
-	`The bill was ${bill} the tip was ${tip} and the total was ${finalValue}`
-); */
+console.log(luc); */
+
+/* LECTURE: Functions
+1. Writeafunctioncalled'describeCountry'whichtakesthreeparameters: 'country', 'population' and 'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki'
+2. Callthisfunction3times,withinputdatafor3differentcountries.Storethe returned values in 3 different variables, and log them to the console */
+
+function describeCountry(country, population, capitalCity) {
+	const newCountry = `${country} has ${population} million people and its capital city is ${capitalCity}`;
+	return newCountry;
+}
+
+const result = describeCountry("Germany", 6, "Berlin");
+console.log(result);
+
+const newResult = describeCountry("Spain", 3, "Madrid");
+console.log(newResult);
