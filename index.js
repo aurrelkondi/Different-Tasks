@@ -42,7 +42,8 @@ console.log(typeof language);
 const country = "Germany";
 const continent = "Europe";
 let isIsland = true;
-isIsland = true; */
+isIsland = true;
+let countryPop = 10000; */
 
 // Basic Operators
 
@@ -54,7 +55,6 @@ isIsland = true; */
 // 5. Based on the variables you created,create a new variable'description'
 // which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
 /* 
-let countryPop = 10000;
 countryPop++;
 console.log(countryPop);
 
@@ -89,7 +89,7 @@ Test data:
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 GOOD LUCK 😀 */
 
-const weightsMark = 95;
+/* const weightsMark = 95;
 const heightsMark = 1.88;
 
 const weightsJohn = 85;
@@ -103,4 +103,74 @@ console.log(johnBMI); //24.1
 
 const markHigherBMI = markBMI > johnBMI;
 
-console.log(markHigherBMI);
+console.log(markHigherBMI); */
+
+// LECTURE: Strings and Template Literals
+// 1. Recreatethe'description'variablefromthelastassignment,thistime using the template literal syntax
+
+/* const description = `${country} is in ${continent} and it's ${countryPop} millions, people speaks ${language}`;
+console.log(description); */
+
+// Coding Challenge #2
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+// Your tasks:
+// 1. Print a nice output to the console,saying who has the higher BMI.The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+// 2. Use a template literal to include the BMI values in the outputs.Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
+
+/* const weightsMark = 95;
+const heightsMark = 1.88;
+
+const weightsJohn = 85;
+const heightsJohn = 1.76;
+
+const markBMI = weightsMark / (heightsMark * heightsMark);
+console.log(markBMI); //26,8
+
+const johnBMI = weightsJohn / (heightsJohn * heightsJohn);
+console.log(johnBMI); //27,4
+
+const markHigherBMI = markBMI > johnBMI;
+
+console.log(markHigherBMI); */
+
+/* if (markBMI > johnBMI) {
+	console.log(`Marks BMI ${markBMI} is higher than Johns Bmi ${johnBMI}`);
+} else {
+	console.log(`John BMI ${johnBMI} is higher than mark Bmi ${markBMI}`);
+}
+ */
+
+/* LECTURE: Type Conversion and Coercion
+1. Predict the result of these 5 operations without executing them:
+     '9' - '5'; //4
+     '19' - '13' + '17';
+     '19' - '13' + 17;
+     '123' < 57;
+     5 + 6 + '4' + 9 - 4 - 2;
+2. Execute the operations to check if you were right */
+
+/* LECTURE: Equality Operators: == vs. ===
+1. Declareavariable'numNeighbours'basedonapromptinputlikethis: prompt('How many neighbour countries does your country have?');
+2. Ifthereisonly1neighbour,logtotheconsole'Only1border!'(uselooseequality == for now)
+3. Useanelse-ifblocktolog'Morethan1border'incase'numNeighbours' is greater than 1
+4. Useanelseblocktolog'Noborders'(thisblockwillbeexecutedwhen 'numNeighbours' is 0 or any other value)
+5. Testthecodewithdifferentvaluesof'numNeighbours',including1and0.
+6. Change==to===,andtestthecodeagain,withthesamevaluesof
+'numNeighbours'. Notice what happens when there is exactly 1 border! Why
+is this happening?
+7. Finally,convert'numNeighbours'toanumber,andwatchwhathappensnow
+when you input 1
+8. Reflectonwhyweshouldusethe===operatorandtypeconversioninthis
+situation */
+
+const numNeighbours = Number(
+	prompt("How many neighbour countries does your country have?")
+);
+
+if (numNeighbours === 1) {
+	console.log("Only 1 Border");
+} else if (numNeighbours > 1) {
+	console.log("More than 1 Border");
+} else {
+	console.log("No Borders");
+}
