@@ -288,7 +288,7 @@ console.log(luc); */
 1. Writeafunctioncalled'describeCountry'whichtakesthreeparameters: 'country', 'population' and 'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki'
 2. Callthisfunction3times,withinputdatafor3differentcountries.Storethe returned values in 3 different variables, and log them to the console */
 
-function describeCountry(country, population, capitalCity) {
+/* function describeCountry(country, population, capitalCity) {
 	const newCountry = `${country} has ${population} million people and its capital city is ${capitalCity}`;
 	return newCountry;
 }
@@ -297,4 +297,32 @@ const result = describeCountry("Germany", 6, "Berlin");
 console.log(result);
 
 const newResult = describeCountry("Spain", 3, "Madrid");
-console.log(newResult);
+console.log(newResult); */
+
+/* LECTURE: Function Declarations vs. Expressions
+
+1. Theworldpopulationis7900millionpeople.Createafunctiondeclaration called 'percentageOfWorld1' which receives a 'population' value, and returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population
+
+2. Tocalculatethepercentage,dividethegiven'population'valueby7900 and then multiply by 100
+
+3. Call'percentageOfWorld1'for3populationsofcountriesofyourchoice, store the results into variables, and log them to the console
+
+4. Createafunctionexpressionwhichdoestheexactsamething,called 'percentageOfWorld2', and also call it with 3 country populations (can be the same populations) */
+
+//FUNCTION DECLARATION
+/* function percentageOfWorld1(population) {
+	return (population / 7900) * 100;
+}
+
+const percIndia = percentageOfWorld1(10);
+const percUSA = percentageOfWorld1(1000); */
+
+//FUNCTION EXPRESSIONS
+/* const percentageOfWorld2 = function (population) {
+	return (population / 7900) * 100;
+};
+
+const percItaly = percentageOfWorld2(100000);
+console.log(percItaly);
+
+console.log(percIndia, percUSA); */
