@@ -367,7 +367,7 @@ Hints:
 § To check if number A is at least double number B, check for A >= 2 * B.
 Apply this to the team's average scores  */
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+/* const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const scoreDolhins = calcAverage(44, 23, 71);
 const scoreKoalas = calcAverage(65, 54, 49);
@@ -382,4 +382,30 @@ const checkWinner = function (avgDolhins, avgKoalas) {
 	}
 };
 
-checkWinner(scoreDolhins, scoreKoalas);
+checkWinner(scoreDolhins, scoreKoalas); */
+
+/* const years = new Array(110, 222, 111);
+console.log(years); */
+
+// LECTURE: Introduction to Arrays
+/*
+1. Createanarraycontaining4populationvaluesof4countriesofyourchoice. You may use the values you have been using previously. Store this array into a variable called 'populations'
+2. Logtotheconsolewhetherthearrayhas4elementsornot(trueorfalse)
+3. Createanarraycalled'percentages'containingthepercentagesofthe
+world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values */
+
+function percentageOfWorld1(population) {
+	return (population / 7900) * 100;
+}
+
+const populations = [111, 222, 333, 444];
+
+console.log(populations); // True
+
+const percentages = [
+	percentageOfWorld1(populations[0]),
+	percentageOfWorld1(populations[1]),
+	percentageOfWorld1(populations[2]),
+	percentageOfWorld1(populations[3]),
+];
+console.log(percentages);
