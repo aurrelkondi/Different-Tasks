@@ -284,7 +284,8 @@ const luc = fruitProccesor(5, 0);
 
 console.log(luc); */
 
-/* LECTURE: Functions
+// LECTURE: Functions
+/* 
 1. Writeafunctioncalled'describeCountry'whichtakesthreeparameters: 'country', 'population' and 'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki'
 2. Callthisfunction3times,withinputdatafor3differentcountries.Storethe returned values in 3 different variables, and log them to the console */
 
@@ -299,8 +300,8 @@ console.log(result);
 const newResult = describeCountry("Spain", 3, "Madrid");
 console.log(newResult); */
 
-/* LECTURE: Function Declarations vs. Expressions
-
+// LECTURE: Function Declarations vs. Expressions
+/* 
 1. Theworldpopulationis7900millionpeople.Createafunctiondeclaration called 'percentageOfWorld1' which receives a 'population' value, and returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population
 
 2. Tocalculatethepercentage,dividethegiven'population'valueby7900 and then multiply by 100
@@ -326,3 +327,59 @@ const percItaly = percentageOfWorld2(100000);
 console.log(percItaly);
 
 console.log(percIndia, percUSA); */
+
+//ARROW FUNCTIONS
+/* const percentageOfWorld3 = (population) => (population / 7900) * 100;
+ */
+
+// LECTURE: Functions Calling Other Functions
+/* 
+1. Createafunctioncalled'describePopulation'.Usethefunctiontypeyou like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1441 million people, which is about 18.2% of the world.'
+2. Tocalculatethepercentage,'describePopulation'callthe 'percentageOfWorld1' you created earlier
+3. Call'describePopulation'withdatafor3countriesofyourchoice */
+
+/* function percentageOfWorld1(population) {
+	return (population / 7900) * 100;
+}
+
+const describePopulation = function (country, population) {
+	const perc = percentageOfWorld1(population);
+	return `${country} has ${population} million people which is about ${perc} of the world`;
+};
+console.log(describePopulation("Germany", 4));
+ */
+
+/* Coding Challenge #1
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+Your tasks:
+1. Createanarrowfunction'calcAverage'tocalculatetheaverageof3scores
+2. Usethefunctiontocalculatetheaverageforbothteams
+3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam
+as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)"
+4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2
+5. Ignoredrawsthistime
+Test data:
+§ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+Hints:
+§ To calculate average of 3 values, add them all together and divide by 3
+§ To check if number A is at least double number B, check for A >= 2 * B.
+Apply this to the team's average scores  */
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+const scoreDolhins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = function (avgDolhins, avgKoalas) {
+	if (avgDolhins >= 2 * avgKoalas) {
+		console.log(`Dolphin win the trophy (${avgDolhins} vs. ${avgKoalas})`);
+	} else if (avgKoalas >= 2 * avgDolhins) {
+		console.log(`Koalas win the trophy (${avgKoalas} vs. ${avgDolhins})`);
+	} else {
+		console.log("No ONE WINS");
+	}
+};
+
+checkWinner(scoreDolhins, scoreKoalas);
