@@ -460,3 +460,69 @@ console.log(
 	`${myCountry.country} has ${myCountry.poputalion} million people, and capital city called ${myCountry.capital}`
 );
  */
+
+//Coding Challenge #3
+/* 
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+Your tasks:
+1. Foreachofthem,createanobjectwithpropertiesfortheirfullname,mass,and height (Mark Miller and John Smith)
+2. Createa'calcBMI'methodoneachobjecttocalculatetheBMI(thesame method on both objects). Store the BMI value to a property, and also return it from the method
+3. LogtotheconsolewhohasthehigherBMI,togetherwiththefullnameandthe respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall. */
+
+/* const mark = {
+	fullName: "Mark Miller",
+	mass: 78,
+	height: 1.69,
+
+	calcBMI: function () {
+		this.bmi = this.mass / this.height ** 2;
+		return this.bmi;
+	},
+};
+const john = {
+	fullName: "John Smith",
+	mass: 92,
+	height: 1.95,
+
+	calcBMI: function () {
+		this.bmi = this.mass / this.height ** 2;
+		return this.bmi;
+	},
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+	console.log(` Mark BMI  ${mark.bmi} is higer than John BMI ${john.bmi}`);
+} else {
+	console.log(` John's BMI  ${john.bmi} is higer than Mark's BMI ${mark.bmi}`);
+} */
+
+// LECTURE: Object Methods
+/* 
+1. Addamethodcalled'describe'tothe'myCountry'object.Thismethod will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
+2. Callthe'describe'method
+3. Addamethodcalled'checkIsland'tothe'myCountry'object.This
+method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property. */
+
+/* const myCountry = {
+	country: "Germany",
+	capital: "Berlin",
+	language: "german",
+	poputalion: 4,
+
+	describe: function () {
+		console.log(
+			`${this.country} has ${this.poputalion} million people, and capital city called ${this.capital}`
+		);
+	},
+
+	checkIsland: function () {},
+};
+
+myCountry.describe();
+myCountry.checkIsland(); */
