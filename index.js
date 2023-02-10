@@ -433,3 +433,30 @@ console.log(bills, tips);
 
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(total); */
+
+//Introduction to Objects
+/* 
+LECTURE: 
+1. Createanobjectcalled'myCountry'foracountryofyourchoice,containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments) */
+
+/* const myCountry = {
+	country: "Germany",
+	capital: "Berlin",
+	language: "german",
+	poputalion: 4,
+};
+console.log(myCountry);
+
+console.log(
+	`${myCountry.country} has ${myCountry.poputalion} million people, and capital city called ${myCountry.capital}`
+);
+
+myCountry.poputalion += 2;
+console.log(
+	`${myCountry.country} has ${myCountry.poputalion} million people, and capital city called ${myCountry.capital}`
+);
+myCountry["poputalion"] -= 2;
+console.log(
+	`${myCountry.country} has ${myCountry.poputalion} million people, and capital city called ${myCountry.capital}`
+);
+ */
