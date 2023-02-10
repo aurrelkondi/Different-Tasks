@@ -526,3 +526,11 @@ method will set a new property on the object, called 'isIsland'. 'isIsland' will
 
 myCountry.describe();
 myCountry.checkIsland(); */
+
+// LECTURE: Iteration: The for Loop
+
+/* 1. Thereareelectionsinyourcountry!Inasmalltown,thereareonly50voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting' */
+
+/* for (let voters = 1; voters <= 50; voters++) {
+	console.log(`Voter number ${voters} is currently voting`);
+} */
