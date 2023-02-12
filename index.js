@@ -568,7 +568,7 @@ for (i = 0; i < populations.length; i++) {
 // 2. Logonlytheneighbouringcountriestotheconsole,onebyone,nottheentire arrays. Log a string like 'Neighbour: Canada' for each country
 // 3. Youwillneedaloopinsidealoopforthis.Thisisactuallyabittricky,sodon't worry if it's too difficult for you! But you can still try to figure this out anyway
 
-const listOfNeighbours = [
+/* const listOfNeighbours = [
 	["Canada", "Mexico"],
 	["Spain"],
 	["Norway", "Sweden", "Russia"],
@@ -579,3 +579,36 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
 		console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
 	}
 }
+ */
+
+// LECTURE: The while Loop
+// 1. Recreatethechallengefromthelecture'LoopingArrays,BreakingandContinuing', but this time using a while loop (call the array 'percentages3')
+// 2. Reflectonwhatsolutionyoulikebetterforthistask:theforlooporthewhile loop?
+
+/* function percentageOfWorld1(population1) {
+	return (population1 / 7900) * 100;
+} */
+
+/* const percentages1 = [
+	percentageOfWorld1(populations[0]),
+	percentageOfWorld1(populations[1]),
+	percentageOfWorld1(populations[2]),
+	percentageOfWorld1(populations[3]),
+];
+
+const populations = [111, 222, 333, 444];
+const percentages2 = [];
+
+for (i = 0; i < populations.length; i++) {
+	const perc = percentageOfWorld1(populations[i]);
+	percentages2.push(perc);
+} */
+/* const populations = [111, 222, 333, 444];
+const percentage3 = [];
+let i = 0;
+while (i < populations.length) {
+	const perc = percentageOfWorld1(populations[i]);
+	percentages2.push(perc);
+	i++;
+}
+console.log(percentage3); */
