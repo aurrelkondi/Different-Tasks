@@ -534,3 +534,48 @@ myCountry.checkIsland(); */
 /* for (let voters = 1; voters <= 50; voters++) {
 	console.log(`Voter number ${voters} is currently voting`);
 } */
+
+// LECTURE: Looping Arrays, Breaking and Continuing
+// 1. Let'sbringbackthe'populations'arrayfromapreviousassignment
+// 2. Useaforlooptocomputeanarraycalled'percentages2'containingthe
+// percentages of the world population for the 4 population values. Use the
+// function 'percentageOfWorld1' that you created earlier
+// 3. Confirmthat'percentages2'containsexactlythesamevaluesasthe
+// 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
+
+/* function percentageOfWorld1(population1) {
+	return (population1 / 7900) * 100;
+}
+
+const percentages1 = [
+	percentageOfWorld1(populations[0]),
+	percentageOfWorld1(populations[1]),
+	percentageOfWorld1(populations[2]),
+	percentageOfWorld1(populations[3]),
+];
+
+const populations = [111, 222, 333, 444];
+const percentages2 = [];
+
+for (i = 0; i < populations.length; i++) {
+	const perc = percentageOfWorld1(populations[i]);
+	percentages2.push(perc);
+}
+ */
+
+// LECTURE: Looping Backwards and Loops in Loops
+// 1. Storethisarrayofarraysintoavariablecalled'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+// 2. Logonlytheneighbouringcountriestotheconsole,onebyone,nottheentire arrays. Log a string like 'Neighbour: Canada' for each country
+// 3. Youwillneedaloopinsidealoopforthis.Thisisactuallyabittricky,sodon't worry if it's too difficult for you! But you can still try to figure this out anyway
+
+const listOfNeighbours = [
+	["Canada", "Mexico"],
+	["Spain"],
+	["Norway", "Sweden", "Russia"],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+	for (let y = 0; y < listOfNeighbours[i].length; y++) {
+		console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+	}
+}
