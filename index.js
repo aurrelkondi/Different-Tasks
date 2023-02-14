@@ -627,7 +627,7 @@ console.log(percentage3); */
 // 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
 // 4.3. Call the function with the 'totals' array
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+/* const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
@@ -655,4 +655,34 @@ const calcAverage = function (arr) {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
-console.log(calcAverage(bills));
+console.log(calcAverage(bills)); */
+
+// Coding Challenge #1
+// Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. Example: [17, 21, 23] will print "... 17oC in 1 days ... 21oC in 2 days ... 23oC in 3 days ..."
+// Your tasks:
+// 1. Createafunction'printForecast'whichtakesinanarray'arr'andlogsa string like the above to the console. Try it with both test datasets.
+// 2. Usetheproblem-solvingframework:Understandtheproblemandbreakitup into sub-problems!
+// Test data:
+// § Data 1: [17, 21, 23]
+// § Data2:[12,5,-5,0,4]
+
+/* const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+	let str = "";
+	for (let i = 0; i < arr.length; i++) {
+		str = str + `${arr[i]} in  ${i + 1} days ...`;
+	}
+	console.log(str);
+};
+
+printForecast(data1); */
+
+//This
+const calcAge = function (birthYear) {
+	console.log(2037 - birthYear);
+	console.log(this);
+};
+
+calcAge(1991);
