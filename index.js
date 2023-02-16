@@ -680,9 +680,71 @@ const printForecast = function (arr) {
 printForecast(data1); */
 
 //This
-const calcAge = function (birthYear) {
+/* const calcAge = function (birthYear) {
 	console.log(2037 - birthYear);
 	console.log(this);
 };
 
-calcAge(1991);
+const jonas = {
+	firstName: "Jonas",
+	year: 1991,
+	calcAge: function () {
+		console.log(this);
+		console.log(2037 - this.year);
+	},
+	greet: () => console.log(`Hey ${this.firstName}`),
+};
+
+jonas.greet();
+jonas.calcAge();
+
+const matilda = {
+	year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+
+matilda.calcAge(); */
+
+// Primitives vs Objects
+
+/* let age = 30;
+let oldAge = age;
+
+age = 31;
+console.log(age, oldAge);
+
+const me = {
+	name: "Jonas",
+	age: 30,
+};
+
+const friend = me;
+friend.age = 27;
+console.log(friend, me); */
+
+//Destructuring Arrays
+
+const restaurant = {
+	name: "Classico Italiano",
+	location: "Via Angelo Tavanti 23, Firenze, Italy",
+	categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+	starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+	mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+	order: function (starterIndex, mainIndex) {
+		return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+	},
+};
+
+let [main, secondary] = restaurant.categories;
+
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
+
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+const number = [1, 2, 3];
+const [a, b, c] = number;
+console.log(a, b, c);
