@@ -731,20 +731,56 @@ const restaurant = {
 	categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
 	starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
 	mainMenu: ["Pizza", "Pasta", "Risotto"],
+	openingHours: {
+		thu: {
+			open: 12,
+			close: 22,
+		},
+		fri: {
+			open: 11,
+			close: 23,
+		},
+		sat: {
+			open: 0, // Open 24 hours
+			close: 24,
+		},
+	},
 
 	order: function (starterIndex, mainIndex) {
 		return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 	},
 };
 
-let [main, secondary] = restaurant.categories;
+//Destructuring OBJECTS, the way how to do it...
+const { name, categories, openingHours } = restaurant;
+// console.log(name, openingHours, categories);
 
+//The Spread Operator(...)
+const arr = [7, 8, 9];
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, "Mozarrela"];
+console.log(newMenu);
+
+//Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+//Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+//Destructuring ARRAYS, the way how to do it...
+let [main, secondary] = restaurant.categories;
 [main, secondary] = [secondary, main];
-console.log(main, secondary);
+// console.log(main, secondary);
 
 const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+// console.log(starter, mainCourse);
 
 const number = [1, 2, 3];
 const [a, b, c] = number;
-console.log(a, b, c);
+// console.log(a, b, c);
